@@ -1,0 +1,387 @@
+.container {
+    max-width: 1920px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Rubik", sans-serif;
+    background: #FBF8EC;
+  }
+  .container .section_1 {
+    width: 95%;
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-bottom: 100px;
+  }
+  .container .section_1 .vse_produkti {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .container .section_1 .vse_produkti h2 {
+    color: #414141;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+  }
+  .container .section_1 .vse_produkti a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+  }
+  .container .section_1 .cards_1 {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .container .section_1 .cards_1 .card_1_1 {
+    padding: 5px 10px;
+    width: 272px;
+    height: 410px;
+    border-radius: 10px;
+    background: #fff;
+    cursor: pointer;
+    box-shadow: 1px 10px 10px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .container .section_1 .cards_1 .card_1_1 img {
+    border-radius: 10px;
+    width: 272px;
+    height: 160px;
+  }
+  .container .section_1 .cards_1 .card_1_1 .scene {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .container .section_1 .cards_1 .card_1_1 .scene p {
+    color: #414141;
+    font-family: "Rubik", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+  }
+  .container .section_1 .cards_1 .card_1_1 .karta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .container .section_1 .cards_1 .card_1_1 .karta p {
+    color: #bfbfbf;
+    font-family: "Rubik", sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+  }
+  .container .section_1 .cards_1 .card_1_1 h3 {
+    color: #414141;
+    font-family: "Rubik", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+  }
+  .container .section_1 .cards_1 .card_1_1 .rating {
+    margin-top: -10px;
+    width: 256px;
+    height: 16px;
+  }
+  .container .section_1 .cards_1 .card_1_1 .korzina {
+    width: 256px;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 8px;
+    border-radius: 4px;
+    border: 1px solid #70c05b;
+    cursor: pointer;
+    gap: 8px;
+    color: #70c05b;
+    font-family: "Rubik", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+  }
+  .container .section_1 .cards_1 .card_1_1 .korzina:hover {
+    background: #f63;
+    color: #fff;
+    border: none;
+  }
+  .container .section_1 .cards_1 .card_1_1:hover {
+    box-shadow: 1px 10px 10px 5px rgba(255, 102, 51, 0.2);
+  }
+  .container .section_4 {
+    width: 85%;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .container .section_4 h2 {
+    color: #414141;
+    font-family: "Rubik", sans-serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+  }
+  .container .section_4 .cards_4 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .container .section_4 .cards_4 .card_4_1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 584px;
+    height: 200px;
+    background: #e5ffde;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0px 8px 47px 0px #e5ffde;
+  }
+  .container .section_4 .cards_4 .card_4_1 .karta {
+    width: 258px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .container .section_4 .cards_4 .card_4_1 .karta h3 {
+    color: #414141;
+    font-family: "Rubik", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 150%;
+  }
+  .container .section_4 .cards_4 .card_4_1 .karta p {
+    color: #414141;
+    font-family: "Rubik", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+  }
+  .container .section_4 .cards_4 .card_4_1 .mini-karta {
+    margin-top: 20px;
+    margin-left: 21px;
+    width: 215px;
+    height: 148px;
+  }
+  .container .section_4 .cards_4 .card_4_1 .mini-kart {
+    margin-top: 20px;
+    margin-left: 21px;
+    width: 193px;
+    height: 188px;
+  }
+  .container .section_4 .cards_4 .card_4_1:hover {
+    background: #fcd5ba;
+    box-shadow: 0px 8px 47px 0px rgba(200, 90, 53, 0.51);
+  }
+  .container .section_5 {
+    width: 85%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .container .section_5 h2 {
+    color: #414141;
+    font-family: "Rubik", sans-serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+  }
+  .container .section_5 .address {
+    display: flex;
+    column-gap: 24px;
+  }
+  .container .section_5 .address button {
+    width: 106px;
+    height: 32px;
+    border: none;
+    border-radius: 4px;
+    background: #f3f2f1;
+    font-family: "Rubik", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .container .section_5 .address button:hover {
+    color: #fff;
+    background: #70c05b;
+  }
+  .container .section_5 .map {
+    margin-top: 24px;
+    width: 1208px;
+    height: 354px;
+    cursor: pointer;
+  }
+  .container .section_6 {
+    border: 1px solid;
+    width: 85%;
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .container .section_6 .maqolalar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .container .section_6 .maqolalar a {
+    column-gap: 10px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .container .section_6 .maqolalar h2 {
+    color: #414141;
+    font-family: "Rubik", sans-serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+  }
+  .container .section_6 .card_maqola {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .container .section_6 .card_maqola .card_m {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 25px;
+    border-radius: 8px;
+    width: 376px;
+    height: 420px;
+    background: #fff;
+    box-shadow: 1px 10px 10px 5px rgba(0, 0, 0, 0.1);
+  }
+  .container .section_6 .card_maqola .card_m img {
+    border-radius: 7px;
+  }
+  .container .section_6 .card_maqola .card_m .txt {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 0 auto;
+  }
+  .container .section_6 .card_maqola .card_m .txt p {
+    color: #414141;
+    font-family: "Rubik", sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+  }
+  .container .section_6 .card_maqola .card_m .txt h3 {
+    color: #202020;
+    font-family: "Rubik", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+  }
+  .container .section_6 .card_maqola .card_m .txt h5 {
+    color: #202020;
+    font-family: "Rubik", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+  }
+  .container .section_6 .card_maqola .card_m .card_btn {
+    width: 150px;
+    height: 40px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    background: #e5ffde;
+    color: #70c05b;
+    font-family: "Rubik", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+  }
+  .container .section_6 .card_maqola .card_m .card_btn:hover {
+    background: #70c05b;
+    color: #fff;
+  }
+  .container .section_6 .card_maqola .card_maqola_1:hover {
+    box-shadow: 1px 10px 10px 5px rgba(255, 102, 51, 0.2);
+  }
+  .admin{
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px 1px #00000085;
+    font-family: "Rubik", sans-serif;
+    background: #fff;
+    position: absolute;
+    right: 0;
+    top: -350px;
+    transition: ease-in-out 450ms;
+  }
+  .admin2{
+    top: 50px;
+    transition: ease-in-out 450ms;
+  }
+  .container .admin form{
+    width: 90%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .container .admin form input{
+    width: 100%;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid #70c05b;
+    outline: none;
+    font-size: 18px;
+    font-family: "Rubik", sans-serif;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #414141;
+  }
+  .container .admin form label{
+    font-size: 19px;
+    font-weight: 500;
+    width: 100%;
+  }
+  .container .admin form button{
+    width: 100%;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid #70c05b;
+    outline: none;
+    font-size: 18px;
+    font-family: "Rubik", sans-serif;
+    color: #fff;
+    background-color: #70c05b;
+  }
