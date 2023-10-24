@@ -10,6 +10,7 @@ export default function Product({
   product,
   removeItem,
   buyProduct,
+  likeProduct
 }) {
   return (
     <>
@@ -47,9 +48,9 @@ export default function Product({
                     <button onClick={() => buyProduct(item.id)} className="buy_btn">
                         <i class="fa-solid fa-cart-shopping"></i>
                     </button>
-                    <button className="like_btn">
-                        <i class="fa-regular fa-heart"></i>
-                        {/* <i class="fa-solid fa-heart"></i> */}
+                    <button className="like_btn" onClick={() => likeProduct(item.id)}>
+                        <i class="fa-regular fa-heart" id="heart"></i>
+                        {/* <i class="fa-solid fa-heart"></i>  */}
                     </button>
                     </div>
                 </div>
