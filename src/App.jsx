@@ -45,26 +45,18 @@ const App = () => {
   
 
   const buyProduct = (id) => {
-    const buyItem = product.filter((item) => item.id === id);
+    const buyItem = product.find((item) => item.id === id);
     setBuyer([...buyer, buyItem]);
     console.log(buyItem);
   }
 
 const heart = document.getElementById("heart");
 
-  const likeProduct = (id) => {
-    setCheckLike(!checkLike)
-    if(checkLike){
-      const likeItem = product.filter((item) => item.id === id);
-      console.log(likeItem);
-      // heart.classList.toggle("fa-regular2")
-      // setLike([...like, likeItem]);
-    }
-    else{
-      // setLike(like.filter((item) => item.id !== id));
-      console.log(false);
-    }
-  }
+const likeProduct = (id) => {
+  const likeItem = product.find((item) => item.id === id);
+  setLike([...like, likeItem]);
+  console.log(likeItem);
+}
 
   return (
     <>

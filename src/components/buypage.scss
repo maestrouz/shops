@@ -1,98 +1,98 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Rubik:wght@300;400;500;600;700;800&display=swap');
 
-.container{
-    max-width: 1920px;
-    height: 100vh;
-    background: #FBF8EC;
-    display: grid;
-    grid-template-rows: 15% 85%;
-    margin: 0 auto;
-    overflow: hidden;
-    font-family: 'Roboto', sans-serif;
-    font-family: 'Rubik', sans-serif;
-    .itemList{
-        width: 95%;
-        height: 90%;
-        margin: 0 auto;
-        padding: 30px 10px;
-        overflow-x: scroll;
-        row-gap: 65px;
-        column-gap: 85px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        .item{
-            width: 300px;
-            height: 400px;
-            border-radius: 10px;
-            background: #fff;
-            box-shadow: 1px 2px 8px 1px #00000052;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            img{
-                border-top-right-radius: 10px;
-                border-top-left-radius: 10px;
-            }
-            .txt{
-                display: flex;
-                flex-direction: column;
-                justify-content: space-around;
-                width: 95%;
-                height: 100%;
-                h3{
-                    font-size: 24px;
-                    color: #000000b2;
-                    text-transform: capitalize;
-                }
-               .btn_cont{
-                width: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: space-around;
-                button{
-                    margin: 0 auto;
-                    padding: 10px 15px;
-                    font-size: 16px;
-                    // background: greenyellow;
-                    border: none;
-                    border-radius: 5px;
-                    cursor: pointer;
-                    transition: ease-in-out 350ms;
-                }
-                .trash_btn{
-                    color: red;
+// .container{
+//     max-width: 1920px;
+//     height: 100vh;
+//     background: #FBF8EC;
+//     display: grid;
+//     grid-template-rows: 15% 85%;
+//     margin: 0 auto;
+//     overflow: hidden;
+//     font-family: 'Roboto', sans-serif;
+//     font-family: 'Rubik', sans-serif;
+//     .itemList{
+//         width: 95%;
+//         height: 90%;
+//         margin: 0 auto;
+//         padding: 30px 10px;
+//         overflow-x: scroll;
+//         row-gap: 65px;
+//         column-gap: 85px;
+//         display: flex;
+//         flex-wrap: wrap;
+//         justify-content: flex-start;
+//         .item{
+//             width: 300px;
+//             height: 400px;
+//             border-radius: 10px;
+//             background: #fff;
+//             box-shadow: 1px 2px 8px 1px #00000052;
+//             display: flex;
+//             flex-direction: column;
+//             align-items: center;
+//             img{
+//                 border-top-right-radius: 10px;
+//                 border-top-left-radius: 10px;
+//             }
+//             .txt{
+//                 display: flex;
+//                 flex-direction: column;
+//                 justify-content: space-around;
+//                 width: 95%;
+//                 height: 100%;
+//                 h3{
+//                     font-size: 24px;
+//                     color: #000000b2;
+//                     text-transform: capitalize;
+//                 }
+//                .btn_cont{
+//                 width: 100%;
+//                 display: flex;
+//                 align-items: center;
+//                 justify-content: space-around;
+//                 button{
+//                     margin: 0 auto;
+//                     padding: 10px 15px;
+//                     font-size: 16px;
+//                     // background: greenyellow;
+//                     border: none;
+//                     border-radius: 5px;
+//                     cursor: pointer;
+//                     transition: ease-in-out 350ms;
+//                 }
+//                 .trash_btn{
+//                     color: red;
 
-                }
-                .trash_btn:hover{
-                    background: red;
-                    color: #00000052;
-                }
-                .buy_btn{
-                    color: rgb(0, 140, 255);
-                }
-                .buy_btn:hover{
-                    background: rgb(0, 140, 255);
-                    color: #fff;
-                }
-                .like_btn{
-                    color: blueviolet;
-                    .fa-regular{
-                        display: block;
-                    }
-                    .fa-regular2{
-                        display: none;
-                    }
-                }
-                .like_btn:hover{
-                    background: blueviolet;
-                    color: #fff;
-                }
-               }
-            }
-        }
-    }
-    .itemList::-webkit-scrollbar{
-        display: none;
-    }
-}
+//                 }
+//                 .trash_btn:hover{
+//                     background: red;
+//                     color: #00000052;
+//                 }
+//                 .buy_btn{
+//                     color: rgb(0, 140, 255);
+//                 }
+//                 .buy_btn:hover{
+//                     background: rgb(0, 140, 255);
+//                     color: #fff;
+//                 }
+//                 .like_btn{
+//                     color: blueviolet;
+//                     .fa-regular{
+//                         display: block;
+//                     }
+//                     .fa-regular2{
+//                         display: none;
+//                     }
+//                 }
+//                 .like_btn:hover{
+//                     background: blueviolet;
+//                     color: #fff;
+//                 }
+//                }
+//             }
+//         }
+//     }
+//     .itemList::-webkit-scrollbar{
+//         display: none;
+//     }
+// }

@@ -3,35 +3,28 @@ import "./buypage.scss";
 
 export default function Buypage() {
   const buyers = JSON.parse(localStorage.getItem('buyer'))
-  // const test = JSON.parse(buyers)
-  // console.log(test);
   return (
-
     <>
-      <div className="ghost__main">
-        <div id="background"></div>
-        <div class="top">
-          <h1>404</h1>
-          <h6>page not found</h6>
+      <div className="container">
+        <div className="newItem">
+          <h2>Bizda Aksiya barcha mahsulotlarimizga 50% chegirma shoshilib qoling!!!</h2>
         </div>
-        <div class="ghost_cont">
-          <div class="ghost-copy">
-            <div class="one"></div>
-            <div class="two"></div>
-            <div class="three"></div>
-            <div class="four"></div>
-          </div>
-          <div class="ghost">
-            <div class="face">
-              <div class="eye"></div>
-              <div class="eye-right"></div>
-              <div class="mouth"></div>
-            </div>
-          </div>
-          <div class="shadow"></div>
-        </div>
-        <div class="bottom">
-          <p>Bu qismni localstoragedagi muommolar tufayli yakunlay olmadim</p>
+        <div className="itemList">
+          {buyers.map((item) => {
+            return (
+              <div className="item" key={item.id}>
+                <img src={item.image} alt="image" />
+                <div className="txt">
+                  <h3>{item.name}</h3>
+                  <p>{item.narx}so'm</p>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </p>
+
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </>
