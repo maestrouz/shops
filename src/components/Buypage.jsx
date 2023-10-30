@@ -1,14 +1,12 @@
 import React from "react";
-import "./buypage.scss";
 
 export default function Buypage() {
   const buyers = JSON.parse(localStorage.getItem('buyer'))
   return (
     <>
       <div className="container">
-        <div className="newItem">
-          <h2>Bizda Aksiya barcha mahsulotlarimizga 50% chegirma shoshilib qoling!!!</h2>
-        </div>
+
+        
         <div className="itemList">
           {buyers.map((item) => {
             return (
@@ -21,6 +19,11 @@ export default function Buypage() {
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   </p>
 
+                  <div className="btn_cont">
+                    <button className="buy">
+                      <i class="fa-solid fa-dollar-sign fa-fade"></i>
+                    </button>
+                  </div>
                 </div>
               </div>
             );
