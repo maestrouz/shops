@@ -29,7 +29,9 @@ export default function Product({
               value={price}
               onChange={(e) => setPrice(e.target.value)}
             />
-            <button>Добавить</button>
+            <button disabled={!name || !price} onClick={creatProduct}>
+              Добавить
+            </button>
           </form>
         </div>
         <div className="itemList">

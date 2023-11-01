@@ -1,20 +1,13 @@
-import React, { useState } from 'react'
-import './Header.css';
-import logo from '../../public/img/logo.png'; 
-import avatar from '../../public/img/man.png'; 
-import maxsulot from '../../public/img/hero_fruits.png'; 
-import { Link } from 'react-router-dom';
-import Like from './Like';
-
+import React from "react";
+import logo from "../../public/img/logo.png";
+import avatar from "../../public/img/man.png";
+import { Link } from "react-router-dom";
 
 export default function Header() {
-  const admin  = document.getElementById('admin');
+  const admin = document.getElementById("admin");
 
-  function test() {
-    admin.classList.toggle('admin2')
-  }
+  function test() {}
 
-  
   return (
     <>
       <header className="header">
@@ -163,7 +156,9 @@ export default function Header() {
                   src={avatar}
                   class="fa-solid fa-user fa-fade"
                 ></i>
-                <p>User</p>
+                <Link to="/LoginForm">
+                  <p>User</p>
+                </Link>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"

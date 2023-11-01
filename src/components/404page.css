@@ -1,43 +1,176 @@
-.page_404 {
-  background: #fff;
-  font-family: "Arvo", serif;
+@import url('https://fonts.googleapis.com/css?family=Audiowide&display=swap');
+
+html,
+body{
+  margin: 0px;
+  overflow: hidden;
 }
 
-a{
-    text-decoration: none;
-}
-
-.text-center{
-    text-align: center;
-}
-
-.page_404 img {
+div{
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 100%;
   width: 100%;
+  margin: 0px;
+  background: radial-gradient(circle, #240015 0%, #12000b 100%);
+  overflow: hidden;
 }
 
-.four_zero_four_bg {
-  width: 100%;
-  background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
-  height: 400px;
-  background-position: center;
-  background-repeat: no-repeat;
+.wrap{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.four_zero_four_bg h1 {
-  font-size: 80px;
+h2{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: 150px;
+  font-size: 32px;
+  text-transform: uppercase;
+  transform: translate(-50%, -50%);
+  display: block;
+  color: #12000a;
+  font-weight: 300;
+  font-family: Audiowide;
+  text-shadow: 0px 0px 4px #12000a;
+  animation: fadeInText 3s ease-in 3.5s forwards, flicker4 5s linear 7.5s infinite, hueRotate 6s ease-in-out 3s infinite;
 }
 
-.four_zero_four_bg h3 {
-  font-size: 80px;
+#svgWrap_1,
+#svgWrap_2{
+  position: absolute;
+  height: auto;
+  width: 600px;
+  max-width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.link_404 {
-  color: #fff !important;
-  padding: 10px 20px;
-  background: #39ac31;
-  margin: 20px 0;
-  display: inline-block;
+#svgWrap_1,
+#svgWrap_2,
+div{
+  animation: hueRotate 6s ease-in-out 3s infinite;
 }
-.contant_box_404 {
-  margin-top: -50px;
+
+#id1_1,
+#id2_1,
+#id3_1{
+  stroke: #ff005d;
+  stroke-width: 3px;
+  fill: transparent;
+  filter: url(#glow);
+}
+
+#id1_2,
+#id2_2,
+#id3_2{
+  stroke: #12000a;
+  stroke-width: 3px;
+  fill: transparent;
+  filter: url(#glow);
+}
+
+#id3_1{
+  stroke-dasharray: 940px;
+  stroke-dashoffset: -940px;
+  animation: drawLine3 2.5s ease-in-out 0s forwards, flicker3 4s linear 4s infinite;
+}
+
+#id2_1{
+  stroke-dasharray: 735px;
+  stroke-dashoffset: -735px;
+  animation: drawLine2 2.5s ease-in-out 0.5s forwards, flicker2 4s linear 4.5s infinite;
+}
+
+#id1_1{
+  stroke-dasharray: 940px;
+  stroke-dashoffset: -940px;
+  animation: drawLine1 2.5s ease-in-out 1s forwards, flicker1 4s linear 5s infinite;
+}
+
+@keyframes drawLine1 {
+  0%  {stroke-dashoffset: -940px;}
+  100%{stroke-dashoffset: 0px;}
+}
+
+@keyframes drawLine2 {
+  0%  {stroke-dashoffset: -735px;}
+  100%{stroke-dashoffset: 0px;}
+}
+
+@keyframes drawLine3 {
+  0%  {stroke-dashoffset: -940px;}
+  100%{stroke-dashoffset: 0px;}
+}
+
+@keyframes flicker1{
+  0%  {stroke: #ff0000;}
+  1%  {stroke: transparent;}
+  3%  {stroke: transparent;}
+  4%  {stroke: #ff0000;}
+  6%  {stroke: #ff0000;}
+  7%  {stroke: transparent;}
+  13% {stroke: transparent;}
+  14% {stroke: #ff0000;}
+  100%{stroke: #ff0000;}
+}
+
+@keyframes flicker2{
+  0%  {stroke: #ff0000;}
+  50% {stroke: #ff0000;}
+  51% {stroke: transparent;}
+  61% {stroke: transparent;}
+  62% {stroke: #ff0000;}
+  100%{stroke: #ff0000;}
+}
+
+@keyframes flicker3{
+  0%  {stroke: #ff0000;}
+  1%  {stroke: transparent;}
+  10% {stroke: transparent;}
+  11% {stroke: #ff0000;}
+  40% {stroke: #ff0000;}
+  41% {stroke: transparent;}
+  45% {stroke: transparent;}
+  46% {stroke: #ff0000;}
+  100%{stroke: #ff0000;}
+}
+
+@keyframes flicker4{
+  0%  {color: #ff0000;text-shadow:0px 0px 4px #ff0000;}
+  30% {color: #ff0000;text-shadow:0px 0px 4px #ff0000;}
+  31% {color: #0044ff;text-shadow:0px 0px 4px #003cff;}
+  32% {color: #ff0000;text-shadow:0px 0px 4px #ff0000;}
+  36% {color: #ff0000;text-shadow:0px 0px 4px #ff0000;}
+  37% {color: #12000a;text-shadow:0px 0px 4px #12000a;}
+  41% {color: #12000a;text-shadow:0px 0px 4px #12000a;}
+  42% {color: #ff0000;text-shadow:0px 0px 4px #ff0000;}
+  85% {color: #ff0000;text-shadow:0px 0px 4px #ff0000;}
+  86% {color: #12000a;text-shadow:0px 0px 4px #12000a;}
+  95% {color: #12000a;text-shadow:0px 0px 4px #12000a;}
+  96% {color: #ff0000;text-shadow:0px 0px 4px #ff0000;}
+  100%{color: #ff0000;text-shadow:0px 0px 4px #ff0000;}
+}
+
+@keyframes fadeInText{
+  1%  {color: #000000;text-shadow:0px 0px 4px #000000;}
+  70% {color: #ff0000;text-shadow:0px 0px 14px #ff0000;}
+  100%{color: #001aff3a;text-shadow:0px 0px 4px #001aff3a;}
+}
+
+@keyframes hueRotate{
+  0%  {
+    filter: hue-rotate(0deg);
+  }
+  50%  {
+    filter: hue-rotate(-120deg);
+  }
+  100%  {
+    filter: hue-rotate(0deg);
+  }
 }

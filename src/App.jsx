@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import { uid } from "uid";
 import Product from "./components/Product";
 import Buypage from "./components/Buypage";
-import Header from "./components/Header";
+import Header from "./components/Header.1";
 import { Route, Routes } from "react-router-dom";
 import Like from "./components/Like";
 import Mainhed from "./components/Mainhed";
