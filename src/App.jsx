@@ -7,6 +7,9 @@ import Header from "./components/Header.1";
 import { Route, Routes } from "react-router-dom";
 import Like from "./components/Like";
 import Mainhed from "./components/Mainhed";
+import Login from "./components/Log/Login";
+import Catalog from "./components/Catalog/Catalog";
+import Footer from "./components/Footer/Footer";
 
 const getLocalStorage = (key) => {
   return localStorage.getItem(key) ? JSON.parse(localStorage.getItem(key)) : [];
@@ -18,16 +21,24 @@ const App = () => {
 
   const [item, setItem] = useState("");
   const [price, setPrice] = useState("");
+  const [category, setCategory] = useState(""); // Added category state
   const [product, setProduct] = useState(getLocalStorage("items"));
   const [buyer, setBuyer] = useState(getLocalStorage("buyer"));
   const [checkLike, setCheckLike] = useState(false);
   const [like, setLike] = useState(getLocalStorage("like"));
   const creatProduct = (e) => {
     e.preventDefault();
-    const newItem = { id: id, image: img, name: item, narx: price };
+    const newItem = {
+      id: id,
+      image: img,
+      name: item,
+      narx: price,
+      category: category,
+    };
     setProduct([...product, newItem]);
     setItem("");
     setPrice("");
+    const newData = { name: item, price: price, category: category };
   };
 
   useEffect(() => {
@@ -53,6 +64,9 @@ const App = () => {
     setLike([...like, likeItem]);
     console.log(likeItem);
   };
+  const updateLocalStorage = () => {
+    localStorage.setItem("items", JSON.stringify(product));
+  };
 
   return (
     <>
@@ -72,11 +86,16 @@ const App = () => {
               removeItem={removeItem}
               buyProduct={buyProduct}
               likeProduct={likeProduct}
+              category={category}
+              setCategory={setCategory}
             />
           }
         />
+        <Route path="/Catalog" element={<Catalog />} />
+        <Route path="/userr" element={<Login />} />
         <Route path="/buypage" element={<Buypage buyer={buyer} />} />
         <Route path="/like" element={<Like />} />
+        <Route path="/Footer" element={<Footer />} />
       </Routes>
     </>
   );

@@ -2,8 +2,9 @@ import React from "react";
 import logo from "../../public/img/logo.png";
 import avatar from "../../public/img/man.png";
 import { Link } from "react-router-dom";
+import "./Header.css";
 
-export default function Header() {
+export default function Header({ user }) {
   const admin = document.getElementById("admin");
 
   function test() {}
@@ -23,7 +24,7 @@ export default function Header() {
             </div>
 
             <div className="nav_list">
-              <a href="/src/components/404page.html">
+              <Link to="/Catalog">
                 <button className="menu">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -53,7 +54,7 @@ export default function Header() {
                   </svg>
                   Каталог
                 </button>
-              </a>
+              </Link>
               <input
                 className="input_search"
                 type="text"
@@ -80,7 +81,7 @@ export default function Header() {
                     Избранное
                   </a>
                 </Link>
-                <Link to="/add">
+                <Link to="/userr">
                   <a href="#">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -150,30 +151,19 @@ export default function Header() {
                 </Link>
               </div>
 
-              <div className="profile" onClick={test}>
-                <i
-                  className="man"
-                  src={avatar}
-                  class="fa-solid fa-user fa-fade"
-                ></i>
-                <Link to="/LoginForm">
-                  <p>User</p>
-                </Link>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M5.64645 8.64645C5.84171 8.45118 6.15829 8.45118 6.35355 8.64645L12 14.2929L17.6464 8.64645C17.8417 8.45118 18.1583 8.45118 18.3536 8.64645C18.5488 8.84171 18.5488 9.15829 18.3536 9.35355L12.3536 15.3536C12.1583 15.5488 11.8417 15.5488 11.6464 15.3536L5.64645 9.35355C5.45118 9.15829 5.45118 8.84171 5.64645 8.64645Z"
-                    fill="#414141"
-                  />
-                </svg>
-              </div>
+              <Link to="/userr">
+                <a href="">
+                  <div className="profile" onClick={test}>
+                    <i
+                      className="man"
+                      src={avatar}
+                      class="fa-solid fa-user fa-fade"
+                    ></i>
+
+                    <p>User</p>
+                  </div>
+                </a>
+              </Link>
             </div>
           </div>
         </nav>

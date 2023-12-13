@@ -1,12 +1,31 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import Footer from "./Footer/Footer.jsx";
+
+
 
 export default function Like() {
-  const buyers = JSON.parse(localStorage.getItem('like'))
+  const [like, setLike] = useState(
+    JSON.parse(localStorage.getItem("like")) || []
+  );
+
+  const removeItem = (id) => {
+    const updatedLike = like.filter((item) => item.id !== id);
+    setLike(updatedLike);
+  };
+   useEffect(() => {
+     localStorage.setItem("like", JSON.stringify(like));
+   }, [like]);
+
   return (
     <>
+      <span>
+        <a href="http://localhost:5173/">Главная</a>
+        <i class="fa-solid fa-chevron-right"></i>
+        избранное
+      </span>
       <div className="container">
         <div className="itemList">
-          {buyers.map((item) => {
+          {like.map((item) => {
             return (
               <div className="item" key={item.id}>
                 <img src={item.image} alt="image" />
@@ -20,12 +39,6 @@ export default function Like() {
 
                   <div className="btn_cont">
                     <button
-                      onClick={() => buyProduct(item.id)}
-                      className="buy_btn"
-                    >
-                      <i class="fa-solid fa-cart-shopping fa-fade"></i>{" "}
-                    </button>
-                    <button
                       onClick={() => removeItem(item.id)}
                       className="trash_btn"
                     >
@@ -38,6 +51,7 @@ export default function Like() {
           })}
         </div>
       </div>
+      <Footer />
     </>
   );
 }

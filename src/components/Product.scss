@@ -1,70 +1,128 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Rubik:wght@300;400;500;600;700;800&display=swap");
-
-.container {
-  max-width: 1920px;
-  height: 100vh;
-  background: #fbf8ec;
-  display: grid;
-  grid-template-rows: 15% 85%;
-  margin: 0 auto;
-
-  font-family: "Roboto", sans-serif;
-  font-family: "Rubik", sans-serif;
-  .newItem {
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css");
+:root {
+  --background: linear-gradient(30deg, #f39c12 30%, #f1c40f);
+  --background-select: linear-gradient(
+    to left,
+    rgb(60, 112, 48) 3rem,
+    #70c05b 3rem
+  );
+  .container {
+    max-width: 1920px;
+    height: 100vh;
+    background: #fbf8ec;
+    display: grid;
+    grid-template-rows: 15% 85%;
     margin: 0 auto;
-    width: 50%;
-    height: 200%;
-    background: #f8f3de;
-    box-shadow: 0px 0px 8px 1px #0000007b;
-    form {
-      margin-top: 20px;
-      margin-left: 25%;
-      width: 70%;
-      input {
-        border-radius: 10px;
-        text-transform: capitalize;
-        margin-top: 20px;
-        display: block;
-        width: 300px;
-        height: 25px;
-        padding: 5px 10px;
-        outline: none;
-        border: 2px solid #70c05b;
-        font-size: 16px;
-        font-weight: 500;
-      }
 
-      button {
-        margin-left: 80px;
-        margin-top: 20px;
-        width: 150px;
-        height: 35px;
-        background: #70c05b;
-        font-size: 16px;
-        font-weight: 500;
-        color: #fff;
-        border: none;
-        box-shadow: 2px 2px 2px 2px #fff;
-        transition: ease-in-out 350ms;
-        border-radius: 10px;
+    font-family: "Roboto", sans-serif;
+    font-family: "Rubik", sans-serif;
+    .newItem {
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      margin: 0 auto;
+      width: 100%;
+      height: 80%;
+      background: #f8f3de;
+      box-shadow: 0px 0px 8px 1px #0000007b;
+
+      form {
+        display: flex;
+        width: 100%;
+        input {
+          border-radius: 10px;
+          text-transform: capitalize;
+          margin-top: 15px;
+          margin-left: 5%;
+          width: 300px;
+          height: 45px;
+          padding: 5px 10px;
+          outline: none;
+          border: 2px solid #70c05b;
+          font-size: 16px;
+          font-weight: 500;
+        }
+
+        button {
+          margin-left: 80px;
+          margin-top: 22px;
+          width: 150px;
+          height: 35px;
+          background: #70c05b;
+          font-size: 16px;
+          font-weight: 500;
+          color: #fff;
+          border: none;
+          box-shadow: 2px 2px 2px 2px #fff;
+          transition: ease-in-out 350ms;
+          border-radius: 10px;
+        }
+        button:hover {
+          cursor: pointer;
+          background: #4b833c;
+        }
       }
-      button:hover {
+    }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+    select {
+      appearance: none;
+      border: 0;
+      outline: 0;
+      background: none;
+      color: inherit;
+      box-shadow: none;
+      font-size: 16px;
+    }
+
+    .select {
+      top: 22px;
+      left: 25px;
+      position: relative;
+      display: flex;
+      width: 230px;
+      height: 30px;
+      background: var(--background-select);
+      border-radius: 10px;
+      overflow: hidden;
+      select {
+        flex: 1;
+        padding: 5px;
         cursor: pointer;
-        background: #4b833c;
+      }
+      // Arrow style
+      &::after {
+        content: "\25BC";
+        position: absolute;
+        right: 1rem;
+        top: 5px;
+        transition: 0.25s all ease;
+        pointer-events: none;
+      }
+      &:hover::after {
+        color: #000000;
+        animation: bounce 1.5s infinite;
+      }
+    }
+    @keyframes bounce {
+      25% {
+        transform: translatey(5px);
+        color: rgb(17, 36, 15);
+      }
+      75% {
+        transform: translatey(-5px);
+        color: #a8c094;
       }
     }
   }
   .itemList {
-    // background: #f1e9c7;
-    margin-top: 120px;
     width: 100%;
     height: 100vh;
-    // padding: 30px 10px;
     padding-top: 10px;
     row-gap: 50px;
-    // column-gap: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -108,39 +166,39 @@
             cursor: pointer;
             transition: ease-in-out 350ms;
           }
+
           .buy_btn {
-            color: rgb(17, 145, 5);
+            color: rgb(5, 138, 1);
           }
           .buy_btn:hover {
             background: rgb(5, 138, 1);
-            color: #fff;
-          }
-          .like_btn {
-            color: rgb(255, 0, 0);
-            .fa-regular {
-              display: block;
-            }
-            .fa-regular2 {
-              display: none;
-            }
-          }
-          .like_btn:hover {
-            background: rgb(255, 0, 0);
-            color: #fff;
-          }
-          .trash_btn {
-            color: rgb(0, 0, 0);
-          }
-          .trash_btn:hover {
-            background: rgb(0, 0, 0);
             color: #ffffff;
           }
+
+          .like_btn {
+            width: 50px;
+            font-size: 20px;
+            color: red;
+          }
+          .like_btn:hover {
+            color: #ffffff;
+            background: rgb(255, 0, 0);
+          }
+
+          .trash_btn {
+            width: 50px;
+            color: black;
+          }
+          .trash_btn:hover {
+            background: black;
+            color: #ffffff;
+          }
+
           .buy {
-            
-            color: rgb(29, 131, 20);
+            color: rgb(17, 133, 13);
           }
           .buy:hover {
-            background: rgb(29, 131, 20);
+            background: rgb(17, 133, 13);
             color: #fff;
           }
         }
